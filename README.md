@@ -1,4 +1,10 @@
-# Students Database CRUD Application with LLM Extension
+ HEAD
+# Students Database CRUD Application with LLM Extensio
+  - `GET /students` - List all students with query filters (`name`, `course`, `born_after`, `born_before`, `skip`, `limit`).
+  - `GET /students/{student_id}` - Retrieve details for a single student.
+  - `PATCH /students/{student_id}` - Partial updates (only modifies provided fields, returns 400 for empty payloads).
+  - `DELETE /students/{student_id}` - Delete student records with HTTP 204 response.
+- **Automatic Startup Seeding**: Automatically sen
 
 A backend REST API built with **FastAPI**, **SQLite**, and **Google Gemini** for the **EWB Edu Tech internship assignment**.
 
@@ -27,12 +33,7 @@ This application provides complete CRUD operations for managing student records,
 ## Features
 
 - **Full CRUD Operations**:
-  - `POST /students` - Create a student with strict Pydantic validation (auto-increments ID, checks unique email, requires at least phone or email).
-  - `GET /students` - List all students with query filters (`name`, `course`, `born_after`, `born_before`, `skip`, `limit`).
-  - `GET /students/{student_id}` - Retrieve details for a single student.
-  - `PATCH /students/{student_id}` - Partial updates (only modifies provided fields, returns 400 for empty payloads).
-  - `DELETE /students/{student_id}` - Delete student records with HTTP 204 response.
-- **Automatic Startup Seeding**: Automatically seeds 5 realistic dummy students on application startup if the database table is empty.
+  - `POST /students` - Create a student with strict Pydantic validation (auto-increments ID, checks unique email, requires at least phone or email).eds 5 realistic dummy students on application startup if the database table is empty.
 - **LLM Extension (`POST /ask`)**:
   - Accepts natural language questions about students.
   - Backend fetches relevant records from SQLite (AI never gets direct SQL access).
@@ -333,3 +334,5 @@ When presenting this project in an internship interview or demo, highlight these
 4. **`main.py`**:
    - Implements FastAPI `lifespan` context manager for startup tasks.
    - Integrates `BackgroundTasks` for optional n8n webhook notifications so client response times are not delayed.
+# student_api
+ 428f9f4b5016c32b2d8eedf135608cfa99f64b9a
