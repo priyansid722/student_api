@@ -1,6 +1,6 @@
   ## 🔴 Live Demo
   **API Docs:** https://student-api-y5uu.onrender.com/docs
-  HEAD
+HEAD
 # Students Database CRUD Application with LLM Extensio
   - `GET /students` - List all students with query filters (`name`, `course`, `born_after`, `born_before`, `skip`, `limit`).
   - `GET /students/{student_id}` - Retrieve details for a single student.
